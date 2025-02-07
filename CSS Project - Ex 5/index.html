@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Exercise 5: Style Your Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form>
+        <h1>Contact Us</h1>
+        <div class="input-wrapper">
+            <label for="name">Your Name</label>
+            <input type="text" placeholder="Enter your name" id="name" required>
+        </div>
+        <div class="input-wrapper">
+            <label for="email">Your Email</label>
+            <input type="email" placeholder="Enter your email" id="email" autocomplete="none" required>
+        </div>
+        <div class="input-wrapper">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Your message here"></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Header Section */
+
+header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+}
+
+nav {
+    background-color: #ededed;
+    border-bottom: 2px solid #cbcbcb;
+    padding-block: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+nav a {
+    font-weight: 500;
+}
+
+/* Hero Section */
+
+.hero-section {
+    width: 100%;
+    display: flex;
+    gap: 25px;
+}
+
+.hero-left-section {
+    width: 30%;
+    background-color: #ededed;
+    padding: 15px ;
+}
+
+.hero-left-section h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.hero-left-section li {
+    list-style: none;
+    padding-block: 12px;
+    border-bottom: 2px solid #d6d6d6;
+}
+
+.hero-left-section li:last-child {
+    border-bottom: none;
+}
+
+.hero-right-section h2 {
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+.hero-right-section .images-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 15px;
+}
+
+.hero-right-section .images-section div {
+    width: 330px;
+    height: 470px;
+}
+
+.hero-right-section .images-section img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-right-section h4 {
+    font-size: 22px;
+    margin-block: 15px;
+}
+
+.hero-right-section ul {
+    margin-bottom: 20px;
+}
+
+.hero-right-section li {
+    margin-left: 45px;
+}
+
+.thank-you-para {
+    margin-block: 10px 40px;
+}
+
+footer {
+    background-color: #333;
+    color: #ececec;
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+}
