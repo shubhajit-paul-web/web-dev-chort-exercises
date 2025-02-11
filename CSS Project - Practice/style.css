@@ -16,14 +16,14 @@ body {
 }
 
 .hero-section {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 .hero-section img {
-  width: clamp(16rem, 60%, 26rem);
+  width: clamp(16rem, 60%, 27rem);
   margin-top: 2.5rem;
 }
 .hero-section h1 {
@@ -38,12 +38,63 @@ body {
 }
 .hero-section p {
   font-size: 1.1rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
+  letter-spacing: 1.1px;
   opacity: 0.7;
-  padding: 0 0.7rem;
-  margin-top: 1.1rem;
+  padding: 1rem 2rem;
+  margin-top: 1.2rem;
 }
 .hero-section p br {
   display: none;
+}
+.hero-section .button {
+  cursor: pointer;
+  margin-block: 2.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.hero-section .button .icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  background-color: #171615;
+  border: 1px solid rgba(218, 197, 167, 0.24);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section .button .icon svg {
+  fill: #DAC5A7;
+  height: 1.1rem;
+  opacity: 0.7;
+}
+.hero-section .button .text {
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* HERO SECTION - RESPONSIVE */
+@media (min-width: 700px) {
+  .hero-section h1 {
+    font-size: 5rem;
+  }
+  .hero-section p {
+    font-size: 1.28rem;
+  }
+  .hero-section p br {
+    display: block;
+  }
+}
+@media (min-width: 1250px) {
+  .hero-section img {
+    width: 32rem;
+  }
+  .hero-section h1 {
+    font-size: 8rem;
+  }
 }/*# sourceMappingURL=style.css.map */
