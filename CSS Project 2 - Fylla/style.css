@@ -1,0 +1,158 @@
+/* Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.9px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 1rem;
+  background-color: #FDFBF5;
+}
+
+main {
+  padding-inline: 3rem;
+  border: 1px solid #111;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #111;
+}
+
+/* *****************
+    Header Section 
+******************** */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 2rem;
+  border-bottom: 1px solid #111;
+}
+header .left a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+header .left a .img1 {
+  width: 3.3rem;
+}
+header .left a .img2 {
+  width: 4.5rem;
+}
+header .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+header .right nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+header .right .right-side-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+header .right .right-side-buttons a {
+  color: #fff;
+  background-color: #111;
+  padding: 0.4rem 1.04rem;
+  border-radius: 6px;
+  letter-spacing: 1.1px;
+  word-spacing: 3px;
+  display: inline-block;
+}
+header .right .right-side-buttons .right-border {
+  width: 1px;
+  height: 2.2rem;
+  background-color: #111;
+}
+header .right .right-side-buttons .languages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+header .right .right-side-buttons .languages div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  line-height: 1;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid #111;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+header .right .right-side-buttons .languages div:hover {
+  background-color: #111;
+  color: #fff;
+}
+header .right .right-side-buttons .theme-toggle {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+  width: 3.5rem;
+  height: 2.1rem;
+  border-radius: 20px;
+  padding: 0.45rem;
+  border: 1px solid #111;
+}
+header .right .right-side-buttons .theme-toggle .circle {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #111;
+  border-radius: 50%;
+}
+header .right .right-side-buttons .mobile-nav-toggle {
+  display: none;
+  cursor: pointer;
+}
+header .right .right-side-buttons .mobile-nav-toggle img {
+  width: 2.5rem;
+}
+
+/* Responsive for Mobile (max-width: 1200px) */
+@media (max-width: 1200px) {
+  header .right nav {
+    display: none;
+  }
+  header .right .right-side-buttons .mobile-nav-toggle {
+    display: block;
+  }
+}
+/* Responsive for Mobile (max-width: 780px) */
+@media (max-width: 780px) {
+  body {
+    padding: 0.7rem;
+  }
+  main {
+    padding-inline: 1.5rem;
+  }
+  main header {
+    padding-block: 1rem;
+  }
+  header .right .right-side-buttons a, header .right .right-side-buttons .right-border, header .right .right-side-buttons .languages {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

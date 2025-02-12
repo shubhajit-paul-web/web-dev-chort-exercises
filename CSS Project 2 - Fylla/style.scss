@@ -1,0 +1,187 @@
+@mixin center-element($justify) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin main-button {
+    color: #fff;
+    background-color: #111;
+    padding: 0.4rem 1.04rem;
+    border-radius: 6px;
+    letter-spacing: 1.1px;
+    word-spacing: 3px;
+    display: inline-block;
+}
+
+/* Variables */
+$regular-font-size: 1rem;
+$border-black: 1px solid #111;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    font-size: $regular-font-size;
+    letter-spacing: 0.9px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding: 1rem;
+    background-color: #FDFBF5;
+}
+
+main {
+    padding-inline: 3rem;
+    border: $border-black;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #111;
+}
+
+/* *****************
+    Header Section 
+******************** */
+header {
+    @include center-element(space-between);
+    padding-block: 2rem;
+    border-bottom: $border-black;
+
+    // Left Side
+    .left a {
+        @include center-element(center);
+        gap: 1rem;
+
+        .img1 {
+            width: 3.3rem;
+        }
+
+        .img2 {
+            width: 4.5rem;
+        }
+    }
+
+    // Right Side
+    .right {
+        @include center-element(center);
+        gap: 2.5rem;
+        
+        nav {
+            @include center-element(center);
+            gap: 2rem;
+        }
+
+        .right-side-buttons {
+            @include center-element(center);
+            gap: 1.2rem;
+
+            a {
+                @include main-button();
+            }
+
+            .right-border {
+                width: 1px;
+                height: 2.2rem;
+                background-color: #111;
+            }
+
+            .languages {
+                @include center-element(center);
+                gap: 0.7rem;
+
+                div {
+                    @include center-element(center);
+
+                    cursor: pointer;
+                    font-size: 0.8rem;
+                    line-height: 1;
+                    width: 2.2rem;
+                    height: 2.2rem;
+                    border: $border-black;
+                    border-radius: 50%;
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                        background-color: #111;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .theme-toggle {
+                @include center-element(start);
+
+                cursor: pointer;
+                width: 3.5rem;
+                height: 2.1rem;
+                border-radius: 20px;
+                padding: 0.45rem;
+                border: $border-black;
+
+                .circle {   
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    background-color: #111;
+                    border-radius: 50%;
+                }
+            }
+
+            .mobile-nav-toggle {
+                display: none;
+                cursor: pointer;
+
+                img {
+                    width: 2.5rem;
+                }
+            }
+        }
+    }
+}
+
+/* Responsive for Mobile (max-width: 1200px) */
+@media (max-width: 1200px) {
+    header {
+        .right {
+            nav {
+                display: none;
+            }
+
+            .right-side-buttons .mobile-nav-toggle {
+                display: block;
+            }
+        }
+    }
+}
+
+/* Responsive for Mobile (max-width: 780px) */
+@media (max-width: 780px) {
+    body {
+        padding: 0.7rem;
+    }
+
+    main {
+        padding-inline: 1.5rem;
+
+        header {
+            padding-block: 1rem;
+        }
+    }
+
+    header {
+        .right .right-side-buttons {
+            a, .right-border, .languages {
+                display: none;
+            }
+        }
+    }
+}
