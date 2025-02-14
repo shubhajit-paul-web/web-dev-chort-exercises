@@ -31,7 +31,7 @@ $border-black: 1px solid #111;
     font-family: "Syne", serif;
     text-transform: uppercase;
     font-size: $regular-font-size;
-    letter-spacing: 0.9px;
+    letter-spacing: 0.8px;
 }
 
 html, body {
@@ -354,6 +354,117 @@ header {
                     border-bottom: none;
                 }
             }
+        }
+    }
+}
+
+/* *****************
+    Our Team Section 
+******************** */
+.our-team-section {
+    display: flex;
+    flex-direction: column;
+
+    // left/top side
+    .left-side {
+        padding-block: 2rem;
+        border-bottom: $border-black;
+
+        h3 {
+            font-size: clamp(2.5rem, 3.6vw, 4.8rem);
+            font-weight: 500;
+            line-height: 1.1;
+        }
+
+        p {
+            font-size: 1.2rem;
+            letter-spacing: 0.4px;
+            text-transform: lowercase;
+            line-height: 1.6;
+            opacity: 0.7;
+            margin-top: 0.7rem;
+
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    // right/bottom side
+    .right-side {
+        width: 100%;
+        padding-block: 2rem;
+        border-bottom: $border-black;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        
+        .video-card {
+            video {
+                width: 100%;
+                aspect-ratio: 3/2;
+                border-radius: 15px;
+                object-fit: cover;
+                object-position: 50% 50%;
+            }
+
+            .name {
+                font-size: 1.45rem;
+                font-weight: 500;
+                text-transform: capitalize;
+                letter-spacing: 0;
+                line-height: 1.8;
+                margin-top: 0.4rem;
+            }
+        }
+    }
+}
+
+/* Responsive for Tablet (min-width: 770px) */
+@media (min-width: 770px) {
+    .our-team-section {
+        flex-direction: row;
+        padding-block: 2.6rem;
+        border-bottom: $border-black;
+        position: relative;
+
+        .left-side {
+            flex-basis: 30%;
+            align-self: flex-start;
+            border-bottom: none;
+            position: sticky;
+            top: 0;
+            left: 0;
+
+            p {
+                font-size: 1.35rem;
+                width: 80%;
+            }
+        }
+
+        .right-side {
+            flex-basis: 70%;
+            gap: 2.5rem;
+            padding-left: 2.5rem;
+            padding-block: 0rem;
+            border-bottom: none;
+            border-left: $border-black;
+
+            .video-card .name {
+                font-size: 1.6rem;
+            }
+            
+        }
+    }
+}
+
+/* Responsive for Desktop/Laptop (min-width: 1200px) */
+
+@media (min-width: 1200px) {
+    .our-team-section {
+        .right-side {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
         }
     }
 }
