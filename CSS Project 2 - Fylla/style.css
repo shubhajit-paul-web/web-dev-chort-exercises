@@ -399,4 +399,93 @@ header .right .right-side-buttons .mobile-nav-toggle img {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
   }
+}
+/* *****************
+    Contact Section 
+******************** */
+.contact-section {
+  padding-block: 2.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border-bottom: 1px solid #111;
+}
+.contact-section .left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 3.3rem;
+}
+.contact-section .left-side img {
+  width: 3.8rem;
+}
+.contact-section .left-side h4 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0px;
+  margin-top: 0.6rem;
+}
+.contact-section .right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+}
+.contact-section .right-side p {
+  text-transform: lowercase;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  opacity: 0.74;
+}
+.contact-section .right-side p::first-letter {
+  text-transform: uppercase;
+}
+.contact-section .right-side a {
+  color: #fff;
+  background-color: #111;
+  padding: 0.4rem 1.04rem;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.contact-section .right-side a:hover {
+  box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.249);
+}
+
+/* Responsive for Tab (min-width: 800px) */
+@media (min-width: 800px) {
+  .contact-section .left-side img {
+    width: 5.2rem;
+  }
+  .contact-section .left-side h4 {
+    font-size: 3.8rem;
+  }
+  .contact-section .right-side p {
+    font-size: 1.4rem;
+  }
+}
+/* Responsive for Desktop/Laptop (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .contact-section {
+    flex-direction: row;
+    padding-block: 4rem;
+    border-bottom: 2px solid #111;
+  }
+  .contact-section .left-side {
+    flex-basis: 67%;
+    border-right: 1px solid #111;
+    flex-direction: column-reverse;
+    gap: 15vw;
+  }
+  .contact-section .left-side h4 {
+    font-size: clamp(4rem, 5vw, 6rem);
+    padding-right: 1rem;
+  }
+  .contact-section .right-side {
+    flex-basis: 33%;
+    padding-inline: 2rem;
+    justify-content: space-between;
+  }
 }/*# sourceMappingURL=style.css.map */
