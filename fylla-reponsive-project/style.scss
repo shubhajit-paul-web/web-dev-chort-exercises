@@ -777,4 +777,12 @@ footer {
     }
 }
 
+// fix element/links selection for mobile devices
+@media (min-width: 500px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+        cursor: default !important;
+    }
+}
+
 // Created by: Shubhajit Paul
