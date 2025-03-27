@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2 - DOM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-[100vh] bg-gray-900 flex justify-center items-center">
+    <div class="w-[40rem] bg-white rounded-lg px-[2rem] py-[3rem]">
+        <a href="./stylish-deep-electronic-music.mp3" download="song.mp3"></a>
+        <div class="w-full h-[1.7rem] bg-gray-300 rounded-[2rem] overflow-hidden">
+            <div class="w-[0%] h-full rounded-[2rem] bg-green-600 ease-linear" id="progress-bar"></div>
+        </div>
+        <div class="text-[1.6rem] font-medium text-right" id="progress-counter">0%</div>
+        <div class="mt-[3rem] flex justify-between items-center">
+            <p class="text-[1.7rem]">Song.mp3</p>
+            <button type="button" class="text-[1.3rem] bg-green-600 text-white py-[0.6rem] px-[1.8rem] rounded active:scale-95 active:bg-green-700">Download File</button>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
